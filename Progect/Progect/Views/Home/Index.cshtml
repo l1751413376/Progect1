@@ -6,10 +6,13 @@
     li {
         list-style: none;
     }
+
     a {
         text-decoration: none;
     }
-
+    ul {
+        padding:0; margin:0;
+    }
     .bord {
         border: 1px solid #ff0000;
     }
@@ -20,12 +23,12 @@
 
         #head .title {
             width: 100%;
-            height: 100px;
+            height: 152px;
         }
 
             #head .title .logo {
-                height: 42px;
-                width: 161px;
+                height: 90px;
+                width: 150px;
                 float: left;
                 margin-right: 30px;
             }
@@ -62,35 +65,37 @@
     }
 
         #con .picts {
-            width: 780px;
-            height: 350px;
+            width: 950px;
+            height: 400px;
             position: relative;
+            overflow: hidden;
         }
 
             #con .picts .pict {
-                width: 100%;
+                width: 2850px;
                 height: 100%;
                 position: relative;
+                z-index: 1;
             }
 
                 #con .picts .pict li {
-                    opacity: 0.01;
-                    display: none;
-                    left: 0px;
-                    top: 0px;
                     z-index: 8;
-                    position: absolute;
+                    float: left;
+                    width: 950px;
+                    height: 400px;
+                    display: block;
                 }
-
             #con .picts .pictNum3 {
                 position: absolute;
                 bottom: 20px;
                 left: 30px;
+                z-index:2;
             }
 
                 #con .picts .pictNum3 li {
                     float: left;
                 }
+
                     #con .picts .pictNum3 li a {
                         float: left;
                         width: 20px;
@@ -102,50 +107,45 @@
                         text-align: center;
                         line-height: 20px;
                     }
+
                         #con .picts .pictNum3 li a:hover {
                             background-color: #50b400;
-    ;                    }
+                        }
+                        #con .picts .pictNum3 li .sel {
+                            background-color: #50b400;
+                        }
+
         #con .items {
-            margin-top:10px;
-            width:100%;
-            height:400px;
+            margin-top: 10px;
+            width: 100%;
+            height: 400px;
         }
+
             #con .items .item {
-                float:left;
-                width:200px;
-                margin:0 20px;
+                float: left;
+                width: 260px;
+                margin: 0 25px;
             }
+
                 #con .items .item .head {
-                    float:left;
-                    width:100%;
-                    clear:both;
-                    height:100px;
-                }
-                #con .items .item .title {
                     float: left;
                     width: 100%;
                     clear: both;
-                    margin:20px 0;
-                    text-align:center;
-                }
-                #con .items .item .intr {
-                    float: left;
-                    width: 100%;
-                    clear: both;
-                    height: 100px;
+                    height: 243px;
                 }
 </style>
+
+
 <div id="head">
     <div class="title">
-        <div style="width:800px;margin:0 auto;">
-            <div class="logo bord"></div>
-            <div class="connet bord">
-                服务热线:<span style="color:red">13000000000 13100000</span>
+        <div style="width: 950px; margin: 0 auto;">
+            <div class="logo">
+                <img src="~/Content/img/di.jpg" /><img />
             </div>
         </div>
     </div>
     <div class="items">
-        <div style="width:800px;margin:0 auto;height:100%">
+        <div style="width: 950px; margin: 0 auto; height: 100%">
             <div class="item">首页</div>
             <div class="item">公司简介</div>
             <div class="item">产品中心</div>
@@ -157,36 +157,40 @@
 
 </div>
 <div id="con">
-    <div style="width:800px;margin:0 auto;height:100%">
+    <div style="width: 950px; margin: 0 auto; height: 100%">
         <div class="picts">
-            <ul class="pict bord">
-                <li style="background-color:#ff0000">1</li>
-                <li style="background-color:#00ff00">2</li>
-                <li style="background-color:#00ff00">3</li>
+            <ul class="pict" _i="1">
+                <li>
+                    <img src="~/Content/img/1-01.jpg" />
+                </li>
+                <li>
+                    <img src="~/Content/img/1-02.jpg" /></li>
+                <li>
+                    <img src="~/Content/img/1-03.jpg" /></li>
             </ul>
             <ul class="pictNum3">
-                <li><a href="javascript:void(0)">1</a></li>
-                <li><a href="javascript:void(0)">2</a></li>
-                <li><a href="javascript:void(0)">3</a></li>
+                <li _i="1"><a href="javascript:void(0)" class="sel">1</a></li>
+                <li _i="2"><a href="javascript:void(0)">2</a></li>
+                <li _i="3"><a href="javascript:void(0)">3</a></li>
             </ul>
         </div>
     </div>
-    <div style="width:800px;margin:0 auto;height:100%">
+    <div style="width: 950px; margin: 0 auto; height: 100%">
         <div class="items">
             <div class="item ">
-                <div class="head bord"></div>
-                <p class="title">印刷业务</p>
-                <div class="intr bord"></div>
+                <div class="head">
+                    <img src="~/Content/img/daohang260.jpg" />
+                </div>
             </div>
             <div class="item ">
-                <div class="head bord"></div>
-                <p class="title">广告工程</p>
-                <div class="intr bord"></div>
+                <div class="head">
+                    <img src="~/Content/img/daohang2.jpg" />
+                </div>
             </div>
             <div class="item ">
-                <div class="head bord"></div>
-                <p class="title">会展服务</p>
-                <div class="intr bord"></div>
+                <div class="head">
+                    <img src="~/Content/img/daohang%203.jpg" />
+                </div>
             </div>
         </div>
     </div>
@@ -198,3 +202,48 @@
         <div></div>
     </div>
 </div>
+@section scripts{
+<script>
+    var page;
+    $(function () {
+        //define
+        page = {
+            $picts: $("ul.pict > li"),
+            $pictsul: $("ul.pict"),
+            $fpictsshow: null,//轮播函数
+            $fpictsclick: null,//轮播点击函数
+            $pictsbtn: $("ul.pictNum3 > li"),
+            $fpictschange: null,
+            $fpictsevent:null,
+        };
+        //
+        page.$funpictsshow = function () {
+            setInterval(page.fpictsevent, 4000);
+        }
+        page.fpictsevent=function(){
+            var i = page.$pictsul.attr("_i");
+            i++;
+            if (i > 3) i = 1;
+            page.$pictsul.attr("_i", i);
+            page.$fpictschange(page.$pictsbtn[i - 1]);
+        }
+        page.$fpictsclick = function () {
+            this.$pictsbtn.click(function () {
+                page.$fpictschange(this);
+                page.$pictsul.attr("_i", $(this).attr("_i"));
+            });
+        }
+        page.$fpictschange = function (sender){
+            var item = $(sender);
+            var i = item.attr("_i");
+            $("a",page.$pictsbtn).removeClass("sel");
+            $("a",page.$pictsbtn[i - 1]).addClass("sel");
+            page.$pictsul.animate({left:'-'+(i-1)*950+'px'});
+        }
+
+        page.$fpictsclick();
+        page.$funpictsshow();
+    });
+    
+</script>
+}
